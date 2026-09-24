@@ -15,6 +15,5 @@ q8-request-logger/
 ├── .gitignore
 ├── middleware/
 │   └── requestLogger.js
-└── screenshots/
 ```
 
