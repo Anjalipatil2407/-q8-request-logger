@@ -1,15 +1,63 @@
-# group no:-8  Request Logger Using Express Middleware
+# Q8 - Request Logger Using Express Middleware
 
-# Problem Statement
-An online shop wants a record of every request made to its API: which method was used, which URL was
-opened, and at what time. You must build a middleware that saves this record in a file so it is not lost when the
-server restarts.
+This project logs every API request to `logs.json` using custom Express middleware.
 
-# Objective
+## Folder Structure
 
-Understand how one Express middleware can run for every request and save information about each request in a file
+```text
+q8-request-logger/
+├── index.js
+├── logs.json
+├── package.json
+├── README.md
+├── .gitignore
+├── middleware/
+│   └── requestLogger.js
+└── screenshots/
+```
 
-# FOLDERS
- -g8-request-logger
- -middleware
- request
+## Install
+
+```bash
+npm install
+```
+
+## Run
+
+```bash
+npm run dev
+```
+
+or:
+
+```bash
+npm start
+```
+
+Server runs on port `5000`.
+
+## Endpoints
+
+- `GET /products`
+- `GET /orders`
+- `GET /customers`
+- `GET /logs`
+
+The first three endpoints are logged. `GET /logs` is not logged.
+
+## Testing
+
+Open:
+
+```text
+http://localhost:5000/products
+http://localhost:5000/orders
+http://localhost:5000/customers
+http://localhost:5000/logs
+```
+
+Check that `logs.json` keeps old entries after restarting the server.
+
+## Screenshots
+
+Add screenshots of successful `/products`, `/orders`, `/customers`, and `/logs` responses inside the `screenshots/` folder before submission.
